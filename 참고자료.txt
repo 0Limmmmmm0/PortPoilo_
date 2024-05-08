@@ -1,0 +1,91 @@
+//컨셉정하기
+
+//참고 웹사이트
+어울릴만한 주제 : 퍼즐
+: https://nationalstudentshow.com/
+
+주제를 퍼즐 시 사용하면 좋을 기능
+: https://altmshfkgudtjr.github.io/main
+
+어울릴만한 주제 : 인터넷, 네온
+: https://www.edwardh.io/
+
+어울릴만한 주제 : 잡지
+: https://www.niccolomiranda.com/
+
+: https://le-qb.com/
+
+: https://tyler-the-creator.tilda.ws/en
+
+: https://ikiiki-being.com/
+
+: https://www.behance.net/gallery/169812739/Graphic-Design-Portfolio-2023?tracking_source=search_projects|frontend+portfolio&l=59
+
+: https://hakaji.io/
+
+: https://www.danilodemarco.com/
+
+: https://ryanstrzok.com/
+
+: https://www.torebentsen.com/
+
+: https://www.therawmaterials.com/talent
+
+: https://igma.im/works/quarks
+--
+: https://creativeapes.design/
+: https://merriment.info/projects?id=scrappy-chef
+: https://www.wow-showroom.com/mouse-parallax
+: https://www.telescopemagazine.com/
+
+심플
+: https://minhpham.design/
+
+
+//참고 기능
+호버 시 출렁이는 효과
+: https://www.cocobongo.tv/#works-featured
+
+글씨 효과
+: https://www.fabulatorij.com/
+
+가로 스크롤 호버 이미지
+: https://hjkang306.github.io/portfolio/index3.html
+
+작업물 보여주는 레이아웃
+: https://upperquad.com/
+
+호버시 변경
+: https://beamaker.jp/
+
+폴더식으로 쌓이는 레이아웃
+: https://www.somefolk.co/
+
+마우스 커서 흐림효과
+: https://www.powell-studio.com/
+
+회전 원 갤러리형
+: https://www.somefolk.co/
+
+사이드 클릭형 메뉴
+: https://kkapustin.com/
+
+마우스커서 회전
+: https://ungdoli0916.tistory.com/890
+
+로고 커서 회전
+: https://viens-la.com/en/
+
+배경 커서 회전
+: https://ungdoli0916.tistory.com/889?category=792710#google_vignette
+
+구름 애니메이션
+: https://wsss.tistory.com/1397
+
+클립 패스
+: https://bennettfeely.com/clippy/
+
+이미지 출처
+: https://kr.freepik.com/free-psd/3d-illustration-with-blank-device-screen-sales-banner_171612404.htm#fromView=search&page=12&position=48&uuid=d835d4c6-d5c8-459c-ae6b-1b272d111440
+
+: https://kr.freepik.com/free-photo/retro-computer-on-desk-arrangement_39353366.htm#fromView=search&page=9&position=30&uuid=d835d4c6-d5c8-459c-ae6b-1b272d111440

@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import "./Variables";
+
+@mixin Main_font {
+    font-family: "Luxurious Roman", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: #{$Font_xl};
+}
+
+@mixin Main_Scroll_font {
+    font-family: "Quantico", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-weight: bold;
+    font-size: #{$Font_md};
+}
+@mixin Popup_title {
+    font-size: #{$Font_la};
+    color: #767676;
+}
+@mixin Popup_coment {
+    font-size: #{$Font_md};
+    color: #767676;
+    margin-bottom: 30px;
+}
