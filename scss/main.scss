@@ -8,6 +8,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'WAGURITTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -196,8 +202,101 @@ section .page:nth-of-type(2n) .con_wrap .background {
     background: linear-gradient(#FFD1FA 70%, #FFFBFF);
     text-align: center;
     position: relative;
+    font-family: 'NanumSquareRound';
+    // height: 1300px;
+    // display: flex;
+    // margin: 1%;
+}
+// .mini_uto{
+//     width: 400px;
+//     height: 400px;
+//     position: absolute;
+//     top: 10%;
+//     left: 10%;
+//     // left: -30%;
+//     border-radius: 45%;
+//     border: 3px solid rgb(255, 255, 255);
+//     animation: move 5.5s infinite linear;
+// }
+// @keyframes move {
+//     100% {
+//       transform: rotate(360deg);
+//     }
+//   }
+.character{
+    position: absolute;
+    top: 0;
+    left: 0;
+    // z-index: 10;
+}
+.mini_uto{
+    position: absolute;
+    top: 0;
+}
+.ri{
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+.mini_uto_bt{
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+}
+//구름 애니메이션
+.background_cloud {
+    background-image: url("http://www.pngmart.com/files/1/Clouds-PNG-Pic.png"), url("https://myphuket-holiday.com/wp-content/uploads/revslider/homepage/cloud.png"), url("http://pngimg.com/uploads/cloud/cloud_PNG7.png"), url("https://myphuket-holiday.com/wp-content/uploads/revslider/homepage/cloud.png");
+    background-size: 100%, 40%, 50%, 20%, cover;
+    background-repeat: no-repeat;
+    background-position: -300px 10%, -200px 70%, 200px 40%, 400px 80%, 100%;
+    animation: animater 15s 2s ease-out infinite alternate;
+    min-height: 100vh;
+    opacity: 0.7;
 }
 
+@keyframes animater {
+    to {
+        background-position: 100px 10%, 500px 70%, 600px 40%, 800px 80%, 100%;
+        background-size: 100%, 40%, 50%, 20%, cover;
+    }
+}
+//말풍선
+.speech_bubble1 {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    top: 50px;
+    left: 50px;
+    width: 400px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 48%;
+    text-align: center;
+    box-shadow: 5px 4px 4px rgb(212, 212, 212);
+    
+}
+
+.speech_bubble1 span {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.speech_bubble1:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 10px;
+    left: 50%;
+    margin-left: -30px;
+    border-color: #ffffff transparent transparent transparent;
+    bottom: -30px;
+}
 .p01 .utopia {
     position: absolute;
     left: 0;
@@ -205,6 +304,7 @@ section .page:nth-of-type(2n) .con_wrap .background {
 }
 
 /*page3 - Skill*/
+
 .p02 {
     background: #FFF6FE;
     display: flex;
@@ -471,23 +571,18 @@ section .page:nth-of-type(2n) .con_wrap .background {
 #leftWrap .content .project {
     width: 100%;
     height: 900px;
-    margin: 10px;
-    // background: palevioletred;
+    margin: 20px;
     border-right: 1px solid #5f5f5f;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
     position: relative;
-
-    h1 {
-        position: relative;
-    }
-
-    span {
+    font-family: 'WAGURITTF';
+    .tag {
         position: absolute;
         top: 20px;
-        padding-left: 3.5%;
+        left: 17%;
+        padding-left: 5.5%;
     }
 }
 
@@ -502,6 +597,12 @@ section .page:nth-of-type(2n) .con_wrap .background {
 #leftWrap .content .project h1 {
     font-size: 3rem;
     text-align: left;
+    margin-bottom: 20px;
+}
+.borderTp{
+    border-top: 1px solid #5f5f5f;
+    width: 97%;
+    margin-bottom: 20px;
 }
 
 #leftWrap .content .project .preview {
@@ -538,17 +639,13 @@ section .page:nth-of-type(2n) .con_wrap .background {
     font-weight: bold;
 }
 
-.pf_bot {
-    width: 100%;
-    height: 100%;
-    padding: 50px 0;
+.project_4{
     position: relative;
-    background: linear-gradient(#FFD1FA, #000000 70%);
 }
 /*회전하는 텍스트*/
-.emblem {
+.emblem, .emblem1, .emblem2, .emblem3, .emblem4 {
 	position: absolute;
-	right: 0;
+	right: 20px;
     bottom: 20px;
 	margin: 0 auto;
 	width: 20vh;
@@ -556,7 +653,7 @@ section .page:nth-of-type(2n) .con_wrap .background {
 	border-radius: 50%;
     cursor: pointer;
     font-weight: bold;
-	color:  #000000;
+	color:  #666666;
 	animation: spinZ 20s linear infinite;
 	text-align: center;
     text-shadow: 3px 3px 3px rgb(230, 230, 230);
@@ -569,7 +666,7 @@ section .page:nth-of-type(2n) .con_wrap .background {
 		top: 0;
 		bottom: 0;
 		text-transform: uppercase;
-		font-size: 3vh;
+		font-size: 2.5vh;
 		transition: all .3s cubic-bezier(0,0,0,1);
 	}
 
@@ -582,75 +679,97 @@ section .page:nth-of-type(2n) .con_wrap .background {
 		}
 	}
 }
+.emblem:hover{
+    opacity: 0.7;
+    color: red;
+}
+.emblem1:hover{
+    opacity: 0.7;
+    color: red;
+}
+.emblem2:hover{
+    opacity: 0.7;
+    color: red;
+}
+.emblem3:hover{
+    opacity: 0.7;
+    color: red;
+}
+.emblem4:hover{
+    opacity: 0.7;
+    color: red;
+}
+.phone{
+    position: absolute;
+}
 /*popup*/
-#popupWrap {
+.popupWrap, .Wrap1{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 10;
+    height: 100vh;
+    z-index: 20;
     transition: 1s;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8);
     display: none;
-}
-.popup {
-    width: 50%;
-    height: 850px;
-    position: fixed;
-    top: 5%;
-    left: 30%;
-    background: #ffdafb;
-    border-radius: 30px;
-    border: 3px solid white;
-    display: flex;
-    flex-direction: column;
-    box-shadow: inset 0px 0px 10px rgba(114, 60, 107, 0.541);
-    justify-content: center;
-    z-index: 11;
-    display: none;
-
-    .imgbox {
-        width: 97%;
-        margin: 0 auto;
-        height: 450px;
-    }
-
-    .txtbox {
-        margin-left: 2%;
-
-        h2 {
-            @include Popup_title;
-
-        }
-
-        h5 {
-            @include Popup_coment;
-        }
-    }
-
-    .close {
-        font-weight: bold;
+    .popup {
+        width: 50%;
+        height: 850px;
         position: absolute;
-        bottom: 20px;
-        right: 20px;
-        cursor: pointer;
-        font-size: 1.6rem;
-        border: 2px solid rgb(255, 255, 255);
-        background: white;
-        padding: 5px 13px;
-        border-radius: 100px;
-        color: #FFD1FA;
-    }
+        top: 5%;
+        left: 25%;
+        background: #ffdafb;
+        border-radius: 30px;
+        border: 3px solid white;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 4px 4px 4px rgb(167, 167, 167);
+        // align-items: center;
+        justify-content: center;
 
-    p {
-        margin-left: 2%;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-size: #{$Font_sm};
-        line-height: 30px;
-        font-family: 'NanumSquareRound';
-        color: #{$Sub_Font_Color};
+        .imgbox {
+            width: 97%;
+            margin: 0 auto;
+            height: 450px;
+        }
+
+        .txtbox {
+            margin-left: 2%;
+
+            h2 {
+                @include Popup_title;
+
+            }
+
+            h5 {
+                @include Popup_coment;
+            }
+        }
+
+        .close {
+            font-weight: bold;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 1.6rem;
+            border: 2px solid rgb(255, 255, 255);
+            background: white;
+            padding: 5px 13px;
+            border-radius: 100px;
+            color: #FFD1FA;
+        }
+
+        p {
+            margin-left: 2%;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: #{$Font_sm};
+            line-height: 30px;
+            font-family: 'NanumSquareRound';
+            color: #{$Sub_Font_Color};
+        }
     }
 }
 /*Color chip*/
@@ -690,3 +809,125 @@ section .page:nth-of-type(2n) .con_wrap .background {
 .Click_icon img:hover {
     filter: invert(0%) sepia(100%) saturate(7500%) hue-rotate(314deg) brightness(112%) contrast(109%);
 }
+/*page5 Contact*/
+.pf_bot {
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+    position: relative;
+    background: linear-gradient(#FFD1FA, #000000 70%);
+    overflow: hidden;
+}
+.contact_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+}
+  .pf_bot .inner {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .pf_bot .top {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(#FFD1FA, #000000 70%);
+  //   background: url('http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/main_bg.jpg') 50% 0 #7f15d5;
+  }
+  
+  .pf_bot .top .inner {
+    height: 962px;
+  }
+  
+  .pf_bot .top .main_img {
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  
+  .pf_bot .top .pacles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  
+  .pf_bot .top .c1_s img {
+    position: absolute;
+    animation: star 20s linear infinite;
+    margin-left: 0;
+    margin-top: 0;
+    opacity: 0;
+  }
+  
+  .pf_bot .top .c1_s img:nth-child(1) {
+    animation-delay: 0;
+    animation-duration: 1.6s
+  }
+  
+  .pf_bot .top .c1_s img:nth-child(2) {
+    animation-delay: -1.5s;
+    animation-duration: 1.4s
+  }
+  
+  .pf_bot .top .c1_s img:nth-child(3) {
+    animation-delay: -0.7s;
+    animation-duration: 1.2s
+  }
+  
+  .pf_bot .top .c1_s img:nth-child(4) {
+    animation-delay: -1s;
+    animation-duration: 1s
+  }
+  
+  .pf_bot .top .c1_s img:nth-child(5) {
+    animation-delay: 0.2s;
+    animation-duration: 2s
+  }
+  
+  .pf_bot .top .c1_s img:nth-child(6) {
+    animation-delay: -2s;
+    animation-duration: 1.8s
+  }
+  
+  .pf_bot .top .c1_s img:nth-child(7) {
+    animation-delay: -0.5s;
+    animation-duration: 1.2s
+  }
+  
+  .pf_bot .top .c1_s img:nth-child(8) {
+    animation-delay: -1.2s;
+    animation-duration: 2s
+  }
+  
+  @keyframes star {
+    from {
+      opacity: 0;
+      margin-left: 0;
+      margin-top: 0
+    }
+  
+    35% {
+      opacity: 1;
+      margin-left: -5%;
+      margin-top: 5%
+    }
+  
+    70% {
+      opacity: 0;
+      margin-left: -10%;
+      margin-top: 10%
+    }
+  
+    to {
+      opacity: 0;
+      margin-left: -10%;
+      margin-top: 10%
+    }
+  }
