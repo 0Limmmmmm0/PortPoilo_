@@ -46,11 +46,20 @@
 호버 시 출렁이는 효과
 : https://www.cocobongo.tv/#works-featured
 
+마우스 회전 출렁
+: https://wsss.tistory.com/664
+
+마우스 회전
+: https://velog.io/@kimhi1105/JavaScript-%EB%A7%88%EC%9A%B0%EC%8A%A4%EB%A5%BC-%EB%94%B0%EB%9D%BC-%EC%9B%80%EC%A7%81%EC%9D%B4%EB%8A%94-%EC%9D%B8%ED%84%B0%EB%A0%89%EC%85%98-%ED%9A%A8%EA%B3%BC%EB%A5%BC-%EB%82%B4%EB%B3%B4%EC%9E%90
+
 글씨 효과
 : https://www.fabulatorij.com/
 
 가로 스크롤 호버 이미지
-: https://hjkang306.github.io/portfolio/index3.html
+: https://hjkang306.github.io/portfolio/index3.html]
+
+서클
+: https://codepen.io/jwor12427/pen/xxWoQej
 
 작업물 보여주는 레이아웃
 : https://upperquad.com/

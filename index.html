@@ -7,15 +7,21 @@
   <!--FONT-->
   <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
   <!--CSS-->
   <link rel="stylesheet" href="css/main.css">
+  <!--파비콘-->
+  <link rel="icon" href="icon/파비콘2.png">
   <title>Yee:WonderLand</title>
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 
 <body style="overflow-x: hidden;">
   <div id="wrap">
-    <div id="border"><img src="img/background.png" alt="background" width="100%" height="100%"></div>
+    <div id="border">
+      <img src="img/background.png" alt="background" width="100%" height="100%">
+    </div>
+    <img src="img/left_border.png" alt="leftborder" style="z-index: 10;" class="left_border">
     <section class="page_wrap">
       <!--page1 Main Slide-->
       <div class="page p00 section" id="p0">
@@ -43,9 +49,14 @@
         <p style="padding-top: 30px;">포트폴리오 컨셉은 “UTOPIA”로 <br>
           어디에도 존재하진 않지만 제가 좋아하는 요소, 나를 가장 잘 드러낼 <br> 수 있는 가상의 원더랜드를 만들어 표현하고자 했습니다.</p>
         <div class="background_cloud"></div>
-        <div class="character"><img src="img/캐릭터.png" alt="Character"></div>
+        <div class="character"><img src="img/캐릭터svg.svg" alt="Character" width="200px"></div>
         <!-- <div class="mini_uto"></div> -->
-        <div class="mini_uto"><img src="img/bubble1.svg" alt="물방울"></div>
+        <div class="mini_uto"><img src="img/bubble1.svg" alt="물방울">
+          <!-- <div class="com"></div> -->
+          <!-- <img src="icon/소통.png" alt="확성기" style="opacity: 0.5;" class="com" width="30%"> -->
+        <!-- <img src="img/miniuto.png" alt="미니 유토피아" style="opacity: 0.9;" class="mini_U"> -->
+      </div>
+        <div class="txxt"><p>소통</p></div>
         <div class="mini_uto ri"><img src="img/bubble2.svg" alt="물방울"></div>
         <div class="mini_uto_bt"><img src="img/bubble3.svg" alt="물방울"></div>
         <div class="speech_bubble1"><span>“LIM’s WONDERlAND”의 주인,
@@ -175,8 +186,6 @@
         </div>
       </article>
       <!--page4 Project-->
-      <!-- <article class="page p03 section">
-      </article> -->
       <div id="leftWrap">
         <div class="content">
           <!--Project5-->
@@ -190,7 +199,6 @@
               <button>REDUX</button>
               <button>SCSS</button>
             </div>
-            <div class="phone"><img src="img/phone.png" alt="" width="300px"></div>
             <div class="emblem">CLICK*CONTENT*</div>
           </div>
           <!--Project4-->
@@ -198,7 +206,7 @@
             <div class="borderTp"></div>
             <h1>JONGNO <br>
               BOOKS</h1><span class="tag">CHAPTER .04</span>
-            <div class="preview">
+            <div class="preview2">
               <img src="img/project4_fullpage.png.png" alt="project">
             </div>
             <div class="btn">
@@ -213,19 +221,19 @@
           <div class="project">
             <div class="borderTp"></div>
             <h1>TEAM <br>
-              PROJECT</h1><span class="tag">CHAPTER .03</span>
-            <div class="preview"><img src="img/project3_fullpage.png.png" alt="project"></div>
+              PROJECT</h1><span class="tag1">CHAPTER .03</span>
+            <div class="preview3"><img src="img/project3_fullpage.png.png" alt="project"></div>
             <div class="btn">
-              <button>REACT</button>
-              <button>REDUX</button>
-              <button>SCSS</button>
+              <button>반응형</button>
+              <button>JQUERY</button>
+              <button>JAVASCRIPT</button>
             </div>
             <div class="emblem2">CLICK*CONTENT*</div>
           </div>
           <div class="project">
             <div class="borderTp"></div>
-            <h1>FARFETCH</h1><span>CHAPTER .02</span>
-            <div class="preview"><img src="img/project2_fullpage.png.png" alt="project"></div>
+            <h1 style="margin-top: 20px; margin-bottom: 50px;">FARFETCH</h1><span class="tag2">CHAPTER .02</span>
+            <div class="preview4"><img src="img/project2_fullpage.png.png" alt="project"></div>
             <div class="btn">
               <button>CSS</button>
               <button>JQUERY</button>
@@ -237,8 +245,8 @@
           <div class="project">
             <div class="borderTp"></div>
             <h1>LEEUM <br>
-              MUSEUM</h1><span>CHAPTER .01</span>
-            <div class="preview"><img src="img/project1_fullpage.png.png" alt="project"></div>
+              MUSEUM</h1><span class="tag">CHAPTER .01</span>
+            <div class="preview5"><img src="img/project1_fullpage.png.png" alt="project"></div>
             <div class="btn">
               <button>HTML</button>
               <button>CSS</button>
@@ -250,6 +258,7 @@
       </div>
       <!--page5 Contact-->
       <div class="pf_bot page section" id="p6">
+        <!-- <img src="img/back.png" alt="" width="100%" height="100%" style="opacity: 0.5;"> -->
           <div class="top">
           <div class="inner">
             <div class="c1_s">
@@ -272,12 +281,26 @@
               <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s7.png" class="c1_s7" style="top:143px;left:805px;">
               <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s8.png" class="c1_s8" style="top:136px;left:900px;">
             </div>
-          </div></div>
-          <div class="contact_box">
-          <h1>CONTACT</h1>
-        <h3>dpfkddl8854@naver.com</h3>
-        <h3>010.8424.8854</h3>
-        <p>본 페이지는 상업적 용도가 아닌 개인 포트폴리용으로 제작되었습니다.</p></div>
+          </div>
+        </div>
+        <div class="contact_box">
+          <div class="left left2" style="line-height: 55px;">
+            <p>Contact by me...</p>
+            <p>dpfkddl8854@naver.com</p>
+            <p>+82 10-8424-8854</p>
+            <a href="https://github.com/0Limmmmmm0?tab=repositories"><p style="color: white;">https://github.com/0Limmmmmm</p></a>
+          </div>
+          <div class="left">
+            <b>[쉼표] : 짧게 쉬는 부분을 나타내는 문장 부호</b><br>
+            <img src="img/logo.png" alt="logo" width="20%" style="margin-top: 20px;">
+            <p style="color: #dfdfdf; line-height: 35px;">"Lim"은 제 자신을 나타내는 심볼입니다.<br>
+              잠시 <span class="fontCoverbox">쉬어감( , )은 있어도
+              마침표( . )는</span> 없습니다. <br>
+              끊임없이 달려가고, 귀기울이고, 배우는 사람이 되겠습니다. </p>
+          </div>
+          <!-- <p>본 페이지는 상업적 용도가 아닌 개인 포트폴리용으로 제작되었습니다.</p>
+          <p>포트폴리용에 사용된 아이콘, 이미지는 프리픽을 사용하였습니다.</p> -->
+        </div>
         </div>
         
 
