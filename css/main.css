@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*Font*/
 @font-face {
   font-family: "NanumSquareRound";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff") format("woff");
@@ -15,6 +16,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.cursor {
+  position: absolute;
+  z-index: 100;
 }
 
 body {
@@ -53,12 +59,12 @@ a {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1;
+  z-index: 10;
 }
 
 .left_border {
   position: fixed;
-  z-index: 2;
+  z-index: 20;
   top: 0;
   left: 0;
 }
@@ -140,7 +146,7 @@ section .page:nth-of-type(2n) .con_wrap .background {
 
 #p0 #Font_box {
   z-index: 10;
-  cursor: pointer;
+  cursor: url(/icon/cursorFont.png) 2 2, auto;
   position: absolute;
 }
 
@@ -185,10 +191,24 @@ section .page:nth-of-type(2n) .con_wrap .background {
 
 #p0 .scroll_txt {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   font-size: 1.5rem;
+  animation: down 1.5s infinite;
+  -webkit-animation: down 1.5s infinite;
+  opacity: 0.9;
 }
 
+@keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
 #p0 .scroll_txt span {
   font-family: "Quantico", sans-serif;
   font-weight: 700;
@@ -201,6 +221,12 @@ section .page:nth-of-type(2n) .con_wrap .background {
   font-size: 2.5rem;
 }
 
+.Character {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
 /*page2 - About me*/
 .p01 {
   background: linear-gradient(#FFD1FA 70%, #FFF6FE);
@@ -211,8 +237,8 @@ section .page:nth-of-type(2n) .con_wrap .background {
 
 .character {
   position: absolute;
-  top: 15%;
-  left: 2%;
+  top: 0;
+  left: -100px;
 }
 
 .mini_uto {
@@ -282,6 +308,32 @@ section .page:nth-of-type(2n) .con_wrap .background {
   box-shadow: 5px 4px 4px rgb(212, 212, 212);
 }
 
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  20% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+  }
+}
 .speech_bubble1 span {
   display: inline-block;
   padding: 10px;
@@ -316,6 +368,14 @@ section .page:nth-of-type(2n) .con_wrap .background {
   font-family: NanumSquareRound;
 }
 
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.8;
+}
+
 .p02 .center {
   position: absolute;
   bottom: 20px;
@@ -323,20 +383,99 @@ section .page:nth-of-type(2n) .con_wrap .background {
   right: 100px;
   display: flex;
   justify-content: center;
-  opacity: 0.9;
 }
 
+/*캐릭터 통통 튀는 모션*/
+.p02 .center .motion {
+  position: absolute;
+  top: 22%;
+  margin-left: 100px;
+  animation: bounce 1s infinite;
+  z-index: 100;
+}
+
+@keyframes bounce {
+  0% {
+    top: 40px;
+    animation-timing-function: ease-in;
+  }
+  50% {
+    top: 120px;
+    height: 40px;
+    animation-timing-function: ease-out;
+  }
+  55% {
+    top: 150px;
+    height: 25px;
+    animation-timing-function: ease-in;
+  }
+  65% {
+    top: 120px;
+    height: 40px;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    top: 40px;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    top: 40px;
+    animation-timing-function: ease-in;
+  }
+}
+.p02 .center .shadow {
+  position: absolute;
+  width: 80px;
+  height: 10px;
+  top: 54%;
+  margin-left: 100px;
+  border-radius: 100%;
+  animation: shadow 1s infinite;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes shadow {
+  0% {
+    transform: scale(0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: scale(1);
+    background-color: rgba(255, 255, 255, 0.2);
+    animation-timing-function: ease-out;
+  }
+  55% {
+    transform: scale(1);
+    background-color: rgba(255, 255, 255, 0.5);
+    animation-timing-function: ease-in;
+  }
+  65% {
+    transform: scale(0.5);
+    background-color: rgba(255, 255, 255, 0.15);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: scale(0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: scale(0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    animation-timing-function: ease-in;
+  }
+}
 .p02 .center .cloud {
   position: absolute;
-  opacity: 0.6;
+  opacity: 0.5;
   bottom: 0;
   left: 35%;
 }
 
 .p02 .center .cloud2 {
   position: absolute;
-  /* opacity: 0.8; */
-  bottom: 35%;
+  bottom: 49%;
   right: 30%;
 }
 
@@ -381,6 +520,7 @@ section .page:nth-of-type(2n) .con_wrap .background {
 .icon_Top_i_box .icon .icon_tull:hover {
   width: 400px;
   transition: 0.5s ease;
+  cursor: url(/icon/hover.png) 2 2, auto;
 }
 
 .icon_Top_i_box .icon .icon_tull:hover .icon_tull_txt {
@@ -443,6 +583,7 @@ section .page:nth-of-type(2n) .con_wrap .background {
 .icon_tull_le:hover {
   width: 410px;
   transition: 0.5s ease;
+  cursor: url(/icon/hover.png) 2 2, auto;
 }
 
 .icon_tull_le:hover .icon_tull_txt {
@@ -507,6 +648,7 @@ section .page:nth-of-type(2n) .con_wrap .background {
 .icon_tull_ri:hover {
   width: 400px;
   transition: 0.5s ease;
+  cursor: url(/icon/hover.png) 2 2, auto;
 }
 
 .icon_tull_ri:hover .icon_tull_txt {
@@ -522,7 +664,8 @@ section .page:nth-of-type(2n) .con_wrap .background {
   position: absolute;
   display: inline-block;
   color: rgb(0, 0, 0);
-  top: -20px;
+  top: -50px;
+  left: calc(45% - 50px);
   width: 400px;
   height: 60px;
   display: flex;
@@ -530,9 +673,18 @@ section .page:nth-of-type(2n) .con_wrap .background {
   justify-content: center;
   border-radius: 48%;
   text-align: center;
-  box-shadow: 5px 4px 4px rgb(212, 212, 212);
+  box-shadow: 5px 4px 4px rgb(235, 235, 235);
+  animation: move 0.5s ease-in 0s infinite alternate;
 }
 
+@keyframes move {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 10px;
+  }
+}
 .speech_bubble span {
   display: inline-block;
   padding: 10px;
@@ -564,7 +716,7 @@ section .page:nth-of-type(2n) .con_wrap .background {
   top: 0;
   margin-left: 2%;
   display: flex;
-  z-index: 1;
+  z-index: 10;
   background: linear-gradient(#FFF6FE 50%, rgba(230, 181, 223, 0.8901960784));
 }
 
@@ -700,10 +852,10 @@ section .page:nth-of-type(2n) .con_wrap .background {
   border-radius: 50%;
   cursor: pointer;
   font-weight: bold;
-  color: #000000;
+  color: #585858;
   animation: spinZ 20s linear infinite;
   text-align: center;
-  text-shadow: 3px 3px 3px rgb(230, 230, 230);
+  text-shadow: 5px 5px 5px rgb(255, 255, 255);
 }
 .emblem span,
 .emblem1 span,
@@ -873,7 +1025,7 @@ section .page:nth-of-type(2n) .con_wrap .background {
 }
 
 .Click_icon img:hover {
-  filter: invert(0%) sepia(100%) saturate(7500%) hue-rotate(314deg) brightness(112%) contrast(109%);
+  filter: invert(20%) sepia(98%) saturate(4126%) hue-rotate(278deg) brightness(81%) contrast(91%);
 }
 
 /*page5 Contact*/
@@ -889,6 +1041,47 @@ section .page:nth-of-type(2n) .con_wrap .background {
   overflow: hidden;
 }
 
+.loading_rotate {
+  position: absolute;
+  left: 15%;
+  top: 25%;
+  width: 20px;
+  height: 150px;
+  z-index: 10;
+  animation: loading 1.5s ease 1500;
+}
+
+.loading_rotate .circle1 {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url(/icon/starstar_.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.loading_rotate .circle2 {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(/icon/starstar.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 110px;
+}
+
+@keyframes loading {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 .contact_box {
   position: absolute;
   color: white;
