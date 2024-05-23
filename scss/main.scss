@@ -255,187 +255,65 @@ section .page:nth-of-type(2n) .con_wrap .background {
     background: linear-gradient(#FFD1FA 70%, #FFF6FE);
     text-align: center;
     position: relative;
-    font-family: 'NanumSquareRound';
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // margin: 1%;
 }
 
-// .mini_uto{
-//     width: 400px;
-//     height: 400px;
-//     position: absolute;
-//     top: 10%;
-//     left: 10%;
-//     // left: -30%;
-//     border-radius: 45%;
-//     border: 3px solid rgb(255, 255, 255);
-//     animation: move 5.5s infinite linear;
-// }
-// @keyframes move {
-//     100% {
-//       transform: rotate(360deg);
-//     }
-//   }
-.character {
-    position: absolute;
-    top: 0;
-    left: -100px;
-    // z-index: 10;
-    // transform: rotateY(180deg);
-}
-
-.mini_uto {
-    position: absolute;
-    top: 0;
-    display: flex;
-    align-items: center;
-
-    .com {
-        position: absolute;
-        top: 25%;
-        left: 40%;
-    }
-
-    .mini_U {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-}
-
-.txxt {
-    width: 200px;
+.p01 .txtbox {
+    width: 100%;
     height: 200px;
-}
-
-.ri {
     position: absolute;
-    right: 0;
-    top: 20%;
-}
-
-.mini_uto_bt {
-    position: absolute;
+    top: 5%;
     left: 0;
-    bottom: -80px;
-}
+    text-align: center;
 
-//구름 애니메이션
-.background_cloud {
-    background-image: url("http://www.pngmart.com/files/1/Clouds-PNG-Pic.png"), url("https://myphuket-holiday.com/wp-content/uploads/revslider/homepage/cloud.png"), url("http://pngimg.com/uploads/cloud/cloud_PNG7.png"), url("https://myphuket-holiday.com/wp-content/uploads/revslider/homepage/cloud.png");
-    background-size: 100%, 40%, 50%, 20%, cover;
-    background-repeat: no-repeat;
-    background-position: -300px 10%, -200px 70%, 200px 40%, 400px 80%, 100%;
-    animation: animater 15s 2s ease-out infinite alternate;
-    min-height: 100vh;
-    opacity: 0.7;
-}
+    h1 {
+        font-family: "Quantico", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-weight: bold;
+    }
 
-@keyframes animater {
-    to {
-        background-position: 100px 10%, 500px 70%, 600px 40%, 800px 80%, 100%;
-        background-size: 100%, 40%, 50%, 20%, cover;
+    p {
+        font-size: 1.1rem;
+        line-height: 35px;
     }
 }
 
+.p01 .left_bu {
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    opacity: 0.5;
+}
+.p01 .right_bu {
+    position: absolute;
+    top: 8%;
+    right: -12%;
+    opacity: 0.7;
+    transform: rotate(30deg);
+}
+.p01 .ri_bt_bu {
+    position: absolute;
+    bottom: -5%;
+    right: 1%;
+    opacity: 0.7;
+    transform: rotate(-10deg);
+}
 //말풍선
 .speech_bubble1 {
     background-color: rgb(255, 255, 255);
     position: absolute;
     display: inline-block;
     color: rgb(0, 0, 0);
-    top: 50px;
-    left: 50px;
+    top: 30%;
+    left: 40%;
     width: 400px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 48%;
-    text-align: center;
     box-shadow: 5px 4px 4px rgb(212, 212, 212);
-    // h1,h2{
-    //     font-size: 15px;
-    //     text-transform: uppercase;
-    //     span{
-    //         width: 100%;
-    //         float: left;
-    //         color: black;
-    //         -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-    //         clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-    //         transform: translateY(-50px);
-    //         opacity: 0;
-    //         animation-name: titleAnimation;
-    //         animation-timing-function:ease;
-    //         animation-duration: 3s;
-    //       }
-    // }
-    // h1 span{
-    //     animation-delay: 0.6s;
-    //     -webkit-animation-fill-mode: forwards;
-
-    //     &:first-child{
-    //       animation-delay: 0.7s;
-
-    //     }
-
-    //     &:last-child{
-    //       color: black;
-    //       animation-delay: 0.5s;
-    //     }
-    //   }
-    //   h2{ 
-    //     top: 0;
-    //     position: absolute;
-
-    //     span{
-    //       animation-delay: 4.1s;
-    //       -webkit-animation-fill-mode: forwards;
-
-    //       &:first-child{
-    //         animation-delay: 4.2s;
-
-    //       }
-
-    //       &:last-child{
-    //         color: black;
-    //         animation-delay: 4s;
-    //       }
-    //     }
-    //   }
-}
-
-@keyframes titleAnimation {
-    0% {
-        transform: translateY(-50px);
-        opacity: 0;
-        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-    }
-
-    20% {
-        transform: translateY(0);
-        opacity: 1;
-        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-    }
-
-    80% {
-        transform: translateY(0);
-        opacity: 1;
-        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-    }
-
-    100% {
-        transform: translateY(50px);
-        opacity: 0;
-        -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
-        clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
-
-    }
+    font-family: #{$Ko_Font};
 }
 
 .speech_bubble1 span {
@@ -456,13 +334,78 @@ section .page:nth-of-type(2n) .con_wrap .background {
     border-color: #ffffff transparent transparent transparent;
     bottom: -30px;
 }
-
-.p01 .utopia {
+.p01 .character {
     position: absolute;
+    top: 39%;
     left: 0;
-    bottom: 0;
+    right: 0;
+    z-index: 12;
+    transform: rotate(20deg);
 }
 
+.p01 .miniutopia {
+    position: absolute;
+    bottom: -20px;
+    left: 35%;
+    z-index: 11;
+    width: 20%;
+}
+
+.move_cover {
+    height: 500px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    cursor: url(/icon/cursorFont.png) 2 2, auto;
+
+    .move_text {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 1rem;
+        color: white;
+        font-family: "Quantico", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    .move_name {
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+
+        .text_name {
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+    }
+}
+
+//구름 애니메이션
+.background_cloud {
+    background-image: url("http://www.pngmart.com/files/1/Clouds-PNG-Pic.png"), url("https://myphuket-holiday.com/wp-content/uploads/revslider/homepage/cloud.png"), url("http://pngimg.com/uploads/cloud/cloud_PNG7.png"), url("https://myphuket-holiday.com/wp-content/uploads/revslider/homepage/cloud.png");
+    background-size: 100%, 40%, 50%, 20%, cover;
+    background-repeat: no-repeat;
+    background-position: -300px 10%, -200px 70%, 200px 40%, 400px 80%, 100%;
+    animation: animater 15s 2s ease-out infinite alternate;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+
+@keyframes animater {
+    to {
+        background-position: 100px 10%, 500px 70%, 600px 40%, 800px 80%, 100%;
+        background-size: 100%, 40%, 50%, 20%, cover;
+    }
+}
 /*page3 - Skill*/
 
 .p02 {
@@ -471,7 +414,6 @@ section .page:nth-of-type(2n) .con_wrap .background {
     flex-wrap: wrap;
     position: relative;
     font-family: #{$Ko_Font};
-    // z-index: 1000;
 }
 
 .canvas {
@@ -611,7 +553,7 @@ section .page:nth-of-type(2n) .con_wrap .background {
     width: 100%;
     height: 15%;
     display: flex;
-    z-index: 2;
+    z-index: 30;
 }
 
 .icon_Top_i_box .icon {
@@ -674,6 +616,7 @@ section .page:nth-of-type(2n) .con_wrap .background {
     border-radius: 30px;
     display: flex;
     flex-wrap: wrap;
+    z-index: 30;
 }
 
 .icon_box .icon_le {
@@ -731,6 +674,7 @@ section .page:nth-of-type(2n) .con_wrap .background {
     border-radius: 30px;
     display: flex;
     flex-wrap: wrap;
+    z-index: 30;
 }
 
 .icon_box2 .icon {
@@ -840,7 +784,7 @@ section .page:nth-of-type(2n) .con_wrap .background {
     width: 5000px;
     position: sticky;
     top: 0;
-    margin-left: 2%;
+    margin-left: 0.5%;
     display: flex;
     z-index: 10;
     background: linear-gradient(#FFF6FE 50%, #e6b5dfe3);
@@ -919,27 +863,47 @@ section .page:nth-of-type(2n) .con_wrap .background {
 
 #leftWrap .content .project .preview img:hover {
     transform: translateY(-87.1%);
-    cursor: grab;
+    cursor: url(/icon/preview.png) 2 2, auto;
+}
+
+#leftWrap .content .project .preview:hover {
+    opacity: 0.8;
 }
 
 #leftWrap .content .project .preview2 img:hover {
     transform: translateY(-84.1%);
-    cursor: grab;
+    cursor: url(/icon/preview.png) 2 2, auto;
+}
+
+#leftWrap .content .project .preview2:hover {
+    opacity: 0.8;
 }
 
 #leftWrap .content .project .preview3 img:hover {
     transform: translateY(-70.1%);
-    cursor: grab;
+    cursor: url(/icon/preview.png) 2 2, auto;
+}
+
+#leftWrap .content .project .preview3:hover {
+    opacity: 0.8;
 }
 
 #leftWrap .content .project .preview4 img:hover {
     transform: translateY(-82.1%);
-    cursor: grab;
+    cursor: url(/icon/preview.png) 2 2, auto;
+}
+
+#leftWrap .content .project .preview4:hover {
+    opacity: 0.8;
 }
 
 #leftWrap .content .project .preview5 img:hover {
     transform: translateY(-75.5%);
-    cursor: grab;
+    cursor: url(/icon/preview.png) 2 2, auto;
+}
+
+#leftWrap .content .project .preview5:hover {
+    opacity: 0.8;
 }
 
 .btn {
@@ -982,11 +946,10 @@ section .page:nth-of-type(2n) .con_wrap .background {
     border-radius: 50%;
     cursor: pointer;
     font-weight: bold;
-    color: #585858;
+    color: #ff0000;
     animation: spinZ 20s linear infinite;
     text-align: center;
-    text-shadow: 5px 5px 5px rgb(255, 255, 255);
-
+    text-shadow: 5px 5px 5px rgb(151, 151, 151);
     // z-index: 10;
     span {
         position: absolute;
@@ -1012,28 +975,33 @@ section .page:nth-of-type(2n) .con_wrap .background {
 }
 
 .emblem:hover {
-    opacity: 0.7;
-    color: red;
+    color: rgb(255, 238, 0);
+    cursor: url(/icon/click.png) 2 2, auto;
+    text-shadow: 5px 5px 5px rgb(49, 49, 49);
 }
 
 .emblem1:hover {
-    opacity: 0.7;
-    color: red;
+    color: rgb(255, 238, 0);
+    cursor: url(/icon/click.png) 2 2, auto;
+    text-shadow: 5px 5px 5px rgb(49, 49, 49);
 }
 
 .emblem2:hover {
-    opacity: 0.7;
-    color: red;
+    color: rgb(255, 238, 0);
+    cursor: url(/icon/click.png) 2 2, auto;
+    text-shadow: 5px 5px 5px rgb(49, 49, 49);
 }
 
 .emblem3:hover {
-    opacity: 0.7;
-    color: red;
+    color: rgb(255, 238, 0);
+    cursor: url(/icon/click.png) 2 2, auto;
+    text-shadow: 5px 5px 5px rgb(49, 49, 49);
 }
 
 .emblem4:hover {
-    opacity: 0.7;
-    color: red;
+    color: rgb(255, 238, 0);
+    cursor: url(/icon/click.png) 2 2, auto;
+    text-shadow: 5px 5px 5px rgb(49, 49, 49);
 }
 
 .phone {

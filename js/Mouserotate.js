@@ -1,3 +1,4 @@
+//page1 Main Slide
 let $constrain = 50;
 let $container = document.getElementById("p0");
 let $content = document.getElementById("Font_box");
@@ -24,3 +25,15 @@ $container.onmousemove = function(e) {
         transformElement($content, $position);
     });
 };
+//page2 About Me
+let moveText = document.querySelector('.move_cover');
+
+let MouseMove = ({clientX}) => {
+  let x = (clientX / innerWidth * 2 - 1) * (innerWidth / 4)
+
+  TweenLite.to('.move_name .text_name', 1, {
+    x: x,
+    ease: Sine.easeOut
+  })
+}
+moveText.addEventListener('mousemove', MouseMove)
